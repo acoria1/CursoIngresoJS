@@ -7,11 +7,11 @@ mostrara el texto de un color entre los 6 posibles
 var ColorSecreto;
 var tiempoInicio;
 function comenzar()
-{
+{ ColorSecreto = Math
 
 	
 
-}//FIN DE LA FUNCIÓN
+}//Preguntar como genero un random string de una lista de valores.
 function Responder(colorParametro)
 {
 	
