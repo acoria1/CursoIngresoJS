@@ -7,31 +7,52 @@ y una de las cuatro operaciones básicas (suma, resta,
 se debe informar si el resultado es el correcto o no.
 */
 var respuesta;
-var randomNumber1;
-var randomNumber2; 
-var randomMath;
-
-randomNumber1 = Math.floor(Math.random()*(10-1+1)+1);
-randomNumber2 = Math.floor(Math.random()*(10-1+1)+1);
-randomMath = 
+var rndNum1;
+var rndNum2; 
+var rndOp;
+var respuestaIng;
 
 function comenzar()
 { 
-    document.getElementById("PrimerNumero").value = randomNumber1;
-    document.getElementById("SegundoNumero").value = randomNumber2;
-    document.getElementById("Operador").value = randomMath;
+rndNum1= Math.floor(Math.random()*10+1);
+rndNum2= Math.floor(Math.random()*10+1);
+
+rndOp = Math.floor(Math.random()*4+1);
+
+console.log(rndOp);
+
+switch (rndOp) {
+  case 1:
+    rndOp = "+"
+    break;
+  case 2:
+    rndOp = "-"
+    break;
+  case 3:
+    rndOp = "/"
+    break;  
+  case 4:
+   rndOp = "*"
+  default:
+    break;
+}
+
+respuesta = eval(rndNum1+rndOp+rndNum2);
+
+console.log(rndOp)
+console.log(respuesta);
+    document.getElementById("PrimerNumero").value = rndNum1;
+    document.getElementById("SegundoNumero").value = rndNum2;
+    document.getElementById("Operador").value = rndOp;
     
 
-}//FIN DE LA FUNCIÓN
+}
 function Responder()
 {
-  respuesta = document.getElementById("Respuesta").value; 
+  respuestaIng = document.getElementById("Respuesta").value; 
 
-  if (respuesta = randomNumber1 randoMath randomNumber2) {
-      alert("correcto");
+  if (respuestaIng == respuesta) {
+    alert("correcto");
   } else { alert ("Incorrecto");
-      
   }
-	
-
-}//FIN DE LA FUNCIÓN
+}

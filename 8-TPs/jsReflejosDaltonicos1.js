@@ -7,36 +7,26 @@ mostrara el texto de un color entre los 6 posibles
 var t0;
 var t1;
 var colorRandom;;
-var azul
-var amarillo
-var marron
-var verde
-var celeste
-var rojo
+var azul;
+var amarillo;
+var marron;
+var verde;
+var celeste;
+var rojo;
+var colorPresionadoEnNumero;
+var colorPresionado;
 
-
-azul = "texto";
-azul = azul.fontcolor("Blue");
-
-amarillo = "texto";
-amarillo = amarillo.fontcolor("Yellow");
-
-marron = "texto";
-marron = marron.fontcolor("Brown");
-
-verde = "texto";
-verde = verde.fontcolor("Green");
-
-celeste = "texto";
-celeste = celeste.fontcolor("Aqua");
-
-rojo = "texto";
-rojo = rojo.fontcolor("Red");
+var azul = "textoazul"; 
+var amarillo = "textoamarillo";
+var marron = "textomarron";
+var verde = "textoverde";
+var celeste = "textoceleste";
+var rojo = "textorojo";
 
 function comenzar()
 {
     t0 = performance.now();
-    colorRandom = Math.floor(Math.random()*(1-1+1)+1);
+    colorRandom = Math.floor(Math.random()*6+1);
 
     switch (colorRandom) {
         case 1:
@@ -54,32 +44,43 @@ function comenzar()
         case 5:
             document.getElementById("ColorElejido").value = celeste
             break;
-         case 6:
+        case 6:
             document.getElementById("ColorElejido").value = rojo
             break;
-    
         default:
             break;
-    }
-
-    
-
-    
-}//Preguntar como cambio color de fuente
-function Responder()// que va dentro del parentesis? es una funcion para cada color?
-{if (colorRandom == 1) {
-    t1 = performance.now()
-
-    alert("Bien hecho, lo has logrado en " + (Math.floor((t1-t0) / 1000)) + " segundos");
-} else {
-    alert("eres daltonico?");
+    }  
 }
-
+function Responder(colorPresionado)
+{   switch (colorPresionado) {
+    case 'azul':
+        colorPresionadoEnNumero = 1
+        break;
+    case 'amarillo':
+        colorPresionadoEnNumero = 2
+        break;
+    case 'marron':
+        colorPresionadoEnNumero = 3
+        break;
+    case 'verde':
+        colorPresionadoEnNumero = 4
+        break;
+    case 'celeste':
+        colorPresionadoEnNumero = 5
+        break;
+    case 'rojo':
+        colorPresionadoEnNumero = 6
+        break;
+    default:
+        break;
+    }
+    if (colorRandom == colorPresionadoEnNumero) {
+        t1 = performance.now()
+        alert("Bien hecho, lo has logrado en " + (Math.floor((t1-t0) / 1000)) + " segundos");
+}   else {
+        alert("eres daltonico?");
+}
 console.log(t1);
 console.log(t0);
 console.log(colorRandom);
-	
-// preguntar si este bien lo del timer
-
-
-}//FIN DE LA FUNCIÓN
+}

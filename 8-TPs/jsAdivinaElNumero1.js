@@ -13,28 +13,24 @@ var numeroIngresado;
 
 function comenzar()
 {
-  numeroSecreto = Math.floor(Math.random() *(100-1+1)+1);
+  numeroSecreto = Math.floor(Math.random() *100+1);
   
-  console.log(numeroSecreto);	
+  console.log(numeroSecreto);
+  contadorIntentos = 0;
+
+  document.getElementById("intentos").value = contadorIntentos;
 }
-
-contadorIntentos = 0
-
-document.getElementById("intentos").value = contadorIntentos;
-
 function verificar()
 { 
   numeroIngresado = document.getElementById("numero").value ;
-  
-  if (numeroIngresado == numeroSecreto) {
-    contadorIntentos = contadorIntentos + 1;
-    alert("Usted es un ganador!!! Y lo logro en solo " + contadorIntentos + " intentos");
+  contadorIntentos = contadorIntentos + 1; // contadorIntentos++
+  document.getElementById("intentos").value = contadorIntentos;
 
-  } else { if (numeroIngresado > numeroSecreto) {
-            contadorIntentos = contadorIntentos + 1;
-              alert("te pasaste de largo compañero")
-  } else { contadorIntentos = contadorIntentos + 1;
-     alert("te quedaste corto compañero");
-          }
-          } 
+  if (numeroIngresado == numeroSecreto) { 
+    alert("Usted es un ganador!!! Y lo logro en solo " + contadorIntentos + " intentos")  
+  } else if (numeroIngresado > numeroSecreto) {
+    alert("te pasaste de largo compañero")
+  } else { 
+    alert("te quedaste corto compañero");
+  }       
 }
