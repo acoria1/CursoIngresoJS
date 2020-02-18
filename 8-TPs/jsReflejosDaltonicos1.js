@@ -7,21 +7,15 @@ mostrara el texto de un color entre los 6 posibles
 var t0;
 var t1;
 var colorRandom;;
-var azul;
-var amarillo;
-var marron;
-var verde;
-var celeste;
-var rojo;
 var colorPresionadoEnNumero;
 var colorPresionado;
 
-var azul = "textoazul"; 
-var amarillo = "textoamarillo";
-var marron = "textomarron";
-var verde = "textoverde";
-var celeste = "textoceleste";
-var rojo = "textorojo";
+var azul = "que color soy?"; 
+var amarillo = "que color soy?";
+var marron = "que color soy?";
+var verde = "que color soy?";
+var celeste = "que color soy?";
+var rojo = "que color soy?";
 
 function comenzar()
 {
@@ -29,26 +23,32 @@ function comenzar()
     colorRandom = Math.floor(Math.random()*6+1);
 
     switch (colorRandom) {
-        case 1:
-            document.getElementById("ColorElejido").value = azul
-            break;
-        case 2:
-            document.getElementById("ColorElejido").value = amarillo
-            break;
-        case 3:
-            document.getElementById("ColorElejido").value = marron
-            break;
-        case 4:
-            document.getElementById("ColorElejido").value = verde
-            break;
-        case 5:
-            document.getElementById("ColorElejido").value = celeste
-            break;
-        case 6:
-            document.getElementById("ColorElejido").value = rojo
-            break;
-        default:
-            break;
+    case 1:
+        document.getElementById("ColorElejido").value = azul
+        document.getElementById("ColorElejido").style.color = "blue";
+        break;
+    case 2:
+        document.getElementById("ColorElejido").value = amarillo
+        document.getElementById("ColorElejido").style.color = "yellow";
+        break;
+    case 3:
+        document.getElementById("ColorElejido").value = marron
+        document.getElementById("ColorElejido").style.color = "brown";
+        break;
+    case 4:
+        document.getElementById("ColorElejido").value = verde
+        document.getElementById("ColorElejido").style.color = "green";
+        break;
+    case 5:
+        document.getElementById("ColorElejido").value = celeste
+        document.getElementById("ColorElejido").style.color = "skyblue";
+        break;
+    case 6:
+        document.getElementById("ColorElejido").value = rojo
+        document.getElementById("ColorElejido").style.color = "red";
+        break;
+    default:
+        break;
     }  
 }
 function Responder(colorPresionado)
@@ -83,4 +83,5 @@ function Responder(colorPresionado)
 console.log(t1);
 console.log(t0);
 console.log(colorRandom);
-}
+
+};

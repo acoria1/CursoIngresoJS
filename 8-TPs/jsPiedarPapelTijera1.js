@@ -8,7 +8,7 @@ var eleccionMaquina;
 
 function comenzar()
 {
-    eleccionMaquina = Math.floor(Math.random() *(3-1+1)+1);
+    eleccionMaquina = Math.floor(Math.random() *3+1);
   
     console.log(eleccionMaquina);	
 	
@@ -16,20 +16,20 @@ function comenzar()
 
 function piedra()
 {
-	if (eleccionMaquina = 1) {
+	if (eleccionMaquina == 1) {
         alert("Empate")
-    } else {if (eleccionMaquina = 2) {
+    } else {if (eleccionMaquina == 2) {
         alert("Perdiste")
     } else { alert("Ganaste!")   
     }   
     }
 
-}
+};
 function papel()
 {
-	if (eleccionMaquina = 1) {
+	if (eleccionMaquina == 1) {
         alert("Ganaste")
-    } else {if (eleccionMaquina = 2) {
+    } else {if (eleccionMaquina == 2) {
         alert("Empate")
     } else { alert("Perdiste")   
     }   
@@ -38,9 +38,9 @@ function papel()
 }
 function tijera()
 {
-    if (eleccionMaquina = 1) {
+    if (eleccionMaquina == 1) {
         alert("Perdiste")
-    } else {if (eleccionMaquina = 2) {
+    } else {if (eleccionMaquina == 2) {
         alert("Ganaste")
     } else { alert("Empate")   
     }   

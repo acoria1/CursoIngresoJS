@@ -1,6 +1,13 @@
+
+var contador = 0
+
 function mostrar()
 {
-	alert('iteración while');
+	while (contador <10) {
+		contador = contador +1
+		alert(contador);
+	}
+	;
 
 
 }//FIN DE LA FUNCIÓN
