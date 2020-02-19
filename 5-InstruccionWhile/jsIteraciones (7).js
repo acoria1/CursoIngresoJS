@@ -3,17 +3,19 @@ function mostrar()
 
 	var contador=0;
 	var acumulador=0;
-	var respuesta = 1;
+	var numeroIngresado;
+	var interaciones = parseInt(prompt("¿cuantos numeros desea operar?"));
 
-while (respuesta != 0) {
-	  respuesta = prompt("Ingrese un numero; si no desea ingresar mas numeros apriete \"Aceptar\"")
-	  if (respuesta == 0) {
-		break;
-	  } else {
-		acumulador = acumulador + parseInt(respuesta)
-	  	contador++
+while (contador < interaciones) {
+		numeroIngresado = parseInt(prompt("Ingrese un numero"))
+		while (isNaN(numeroIngresado)) {
+			alert("el numero no es valido")
+			numeroIngresado = parseInt(prompt("Ingrese un numero"))
+		}
+	  acumulador = acumulador + numeroIngresado
+	  contador++
 	  }
-}
+
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/(contador);
 }
