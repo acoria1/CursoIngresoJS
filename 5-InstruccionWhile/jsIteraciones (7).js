@@ -1,4 +1,4 @@
-function mostrar()
+/*function mostrar()
 {
 
 	var contador=0;
@@ -18,4 +18,22 @@ while (contador < interaciones) {
 
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/(contador);
+}*/
+
+function mostrar(){
+	var acumulador = 0;
+	var respuesta;
+	var contador = 0;
+
+	do { var numeroIngresado = parseInt(prompt("ingrese un numero"))
+		while (isNaN(numeroIngresado)) { alert("numero invalido")
+			numeroIngresado=parseInt(prompt("ingrese un numero valido"))
+		}
+		acumulador += numeroIngresado
+		contador++
+		respuesta = confirm("desea continar?")
+	} while (respuesta);
+
+	document.getElementById('suma').value=acumulador;
+	document.getElementById('promedio').value=acumulador/(contador);
 }

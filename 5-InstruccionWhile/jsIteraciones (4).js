@@ -1,6 +1,6 @@
 
-function mostrar()
-{
+function mostrar(){
+/*{
 	var numero = 99;
 
 
@@ -10,4 +10,14 @@ function mostrar()
 	}	
 	document.getElementById("Numero").value = numero;
 
-}//FIN DE LA FUNCIÓN
+}*/
+
+var numeroIngresado;
+
+do {numeroIngresado = parseInt(prompt("ingrese un numero del 0 al 9"))
+	if(numeroIngresado>9 || numeroIngresado<0 || isNaN(numeroIngresado)){
+	alert("numero invalido")}
+} while (numeroIngresado>9 || numeroIngresado<0 || isNaN(numeroIngresado));
+alert("numero validado")
+document.getElementById("Numero").value = numeroIngresado;
+}

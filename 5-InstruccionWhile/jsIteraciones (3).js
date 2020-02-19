@@ -1,5 +1,5 @@
 
-
+/*
 function mostrar()
 {
 var clave = prompt("ingrese la clave.");
@@ -14,3 +14,17 @@ while (clave != "utn750" && contador<2) {
 } else {
     alert("Ha superado el numero maximo de intentos, vuelva a cargar la pagina");
 }}
+*/
+
+function mostrar(){
+    var contraseña;
+    do { 
+        contraseña = prompt("ingrese su clave")
+        contraseña = contraseña.toLowerCase();
+        
+        if (contraseña == "utn750") {
+            alert("acceso concedido")
+        } else { alert("acceso denegado")
+        }  
+    } while (contraseña != "utn750");
+}
