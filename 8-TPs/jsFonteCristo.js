@@ -14,12 +14,13 @@ var contador;
 var primeraVez;
 var contadorDos;
 
+// declarar funcion ComenzarIngreso()
 
 function NumerosPares ()
 {   numeroPos = document.getElementById("numero").value ;
     numeroPos = Math.floor(parseInt(numeroPos));
      if (numeroPos>0) {
-         cantPair = (Math.floor(numeroPos / 2))-1+(numeroPos%2)
+         cantPair = (Math.floor(numeroPos / 2))//-1+(numeroPos%2)
          alert("cantidad de numeros pares: "+cantPair)
     }   else if (isNaN(numeroPos)) {
             alert("por favor ingrese un numero")
@@ -52,8 +53,8 @@ function NumerosImpares()
 function NumerosDivisibles() {
     numeroPos = document.getElementById("numero").value ;
     numeroPos = parseInt(numeroPos);
-    contador = 1
-    acumulador = 0
+    contador = 2
+    acumulador = numeroPos
 
     if (numeroPos>0) {
         while (contador<100) {
@@ -66,7 +67,7 @@ function NumerosDivisibles() {
         alert("por favor ingrese un numero")
         return;
         }   else if (numeroPos == 0) {
-            alert("cantidad de numeros impares: 0")
+            alert("ningun numero es divisible por 0")
             return;
             }   else {   alert("por favor ingrese un numero positivo")
                 return;
@@ -77,7 +78,7 @@ function VerificarPrimo() {
     numeroPos = parseInt(numeroPos);
     contador = numeroPos-1
     
-    if (numeroPos>0) {
+    if (numeroPos>2) {
         while (contador>1) {
             if (numeroPos%contador == 0) {
                 alert ("NO es primo")
@@ -91,12 +92,17 @@ function VerificarPrimo() {
     }   else if (isNaN(numeroPos)) {
         alert("por favor ingrese un numero")
         return;
-        }   else if (numeroPos == 0) {
-            alert("el 0 no es un numero primo")
-            return;
-            }   else {   alert("por favor ingrese un numero positivo")
-                return;
-                }
+        } else if (numeroPos == 0) {
+        alert("el 0 no es un numero primo")
+        return;
+        } else if (numeroPos == 1) {
+        alert("NO es primo")
+        } else if (numeroPos == 2) {
+        alert("es primo")
+        } else {
+        alert("por favor ingrese un numero positivo")
+        return;
+        }
 }
 function NumerosPrimos() {
     numeroPos = document.getElementById("numero").value ;
@@ -121,7 +127,7 @@ function NumerosPrimos() {
             acumulador++
         }
         contador--
-        console.log("CONTADOR:" +contador)
+        console.log("CONTADOR: " +contador)
         contadorDos = contador - 1
     }
         alert("cantidad de numeros primos " + (acumulador+1))// el +1 representa al numero 2 

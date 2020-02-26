@@ -19,6 +19,8 @@ var contPair=0;
 var contCeros = 0
 var numeroIngresado;
 var respuesta = true;
+var promPos;
+var promNeg;
 
 while (respuesta == true) {
 
@@ -40,13 +42,23 @@ if (numeroIngresado == 0){
 if (numeroIngresado%2 == 0) {
 	contPair++
 }
-var promPos = acumPos/contPos;
-var promNeg = acumNeg/contNeg;
+
+if (contPos != 0) {
+	promPos= acumPos/contPos
+} else {promPos = "no ha ingresado numeros positivos"
+}
+
+if (contNeg != 0) {
+promNeg= acumNeg/contNeg;	
+} else {
+promNeg = "no ha ingresado numeros negativos"
+}
+
 var diferencial = acumPos + acumNeg;
 
 respuesta = confirm("desea continuar?")};
 
-document.writeln("la suma de los positivos es: " + acumPos + "<br>");
+document.write("la suma de los positivos es: " + acumPos + "<br>");
 document.writeln("la suma de los negativos es: " + acumNeg + "<br>");
 document.writeln("la cantidad de numeros positivos es: " +contPos+ "<br>");
 document.writeln("la cantidad de numeros negativos es: " +contNeg+ "<br>");
