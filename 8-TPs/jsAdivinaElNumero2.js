@@ -8,21 +8,54 @@
 5° intento: “usted está en la media”.
 Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
-
-var numeroSecreto; 
-var contadorIntentos;
+var numRnd;
+var contadorInt;
+var numIng;
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-	
-
+numRnd= parseInt(Math.random()*100);
+contadorInt=1;
+console.log(numRnd); 
 }
 
 function verificar()
 {
-	
-	
+numIng= parseInt(document.getElementById("numero").value);
+if (numIng == numRnd) {
+	switch (contadorInt) {
+		case 1:
+		alert("usted es un psiquico");
+		break;
+		case 2: 
+		alert("excelente percepcion");
+		break;
+		case 3:
+		alert("esto es suerte");
+		break;
+		case 4: 
+		alert("excelente tecnica");
+		break;
+		case 5:
+		alert("usted esta en la media");
+		break;
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		alert("falta tecnica");
+		break;
+		default:
+		("unlucky")
+		break;
+	}
+} else if (numIng<numRnd) {
+	alert("te quedaste corto")
+} else {
+	alert("te pasaste")
+}
+document.getElementById("intentos").value = contadorInt
+contadorInt++
 
 }

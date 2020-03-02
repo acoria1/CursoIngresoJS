@@ -19,8 +19,6 @@ rndNum2= Math.floor(Math.random()*10+1);
 
 rndOp = Math.floor(Math.random()*4+1);
 
-console.log(rndOp);
-
 switch (rndOp) {
   case 1:
     rndOp = "+"
@@ -45,7 +43,6 @@ console.log(respuesta);
     document.getElementById("SegundoNumero").value = rndNum2;
     document.getElementById("Operador").value = rndOp;
     
-
 }
 function Responder()
 {
